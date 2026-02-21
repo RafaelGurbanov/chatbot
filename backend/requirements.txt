@@ -2,9 +2,4 @@ fastapi
 uvicorn[standard]
 pydantic
 
-faiss-cpu
-sentence-transformers
-numpy==2.1.3
-
 python-dotenv
-rapidfuzz
