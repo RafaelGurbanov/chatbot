@@ -1,0 +1,292 @@
+{
+  "schema_version": "2.1",
+  "generated_at": "2026-02-21T12:00:00Z",
+  "ui": {
+    "botName": "Autism Support Chatbot",
+    "subtitle": "Rəsmi dəstək • Praktik cavablar",
+    "welcomeMessage": "Salam! Mən autizm mövzusunda sizə dəstək olmaq üçün buradayam. Övladınızla bağlı sualınızı yazın.",
+    "inputPlaceholder": "Mesajınızı yazın...",
+    "buttonText": "Chat"
+  },
+  "fallback": {
+    "answer": "Sualınızı tam dəqiqləşdirə bilmədim. Zəhmət olmasa 3 detal yazın: (1) yaş, (2) nə tetikləyir (səs/işıq/qoxu/toxunuş/rutin), (3) nə baş verir və nə qədər çəkir. Bu məlumatla daha dəqiq cavab verə bilərəm."
+  },
+  "items": [
+    {
+      "id": "smalltalk_greeting",
+      "title": "Salamlaşma",
+      "topic": "smalltalk",
+      "intent": ["smalltalk", "greeting"],
+      "keywords": ["salam", "salamlar", "necəsən", "necesen", "hi", "hello", "salam bot", "salam chatbot"],
+      "text": "Salam! Mən autizm mövzusunda sizə dəstək olmaq üçün buradayam. Övladınızın davranışı, inkişafı və ya gündəlik qayğısı ilə bağlı sualınızı yaza bilərsiniz."
+    },
+    {
+      "id": "smalltalk_thanks",
+      "title": "Təşəkkürə cavab",
+      "topic": "smalltalk",
+      "intent": ["smalltalk", "thanks"],
+      "keywords": ["təşəkkür", "tesekkur", "sağ ol", "sag ol", "çox sağ ol", "thanks"],
+      "text": "Xahiş edirəm! İstəsəniz vəziyyəti bir az detallı yazın (yaş, nə tetikləyir, nə baş verir) — daha uyğun və praktik cavab verə bilərəm."
+    },
+    {
+      "id": "smalltalk_goodbye",
+      "title": "Sağollaşma",
+      "topic": "smalltalk",
+      "intent": ["smalltalk", "goodbye"],
+      "keywords": ["hələlik", "helelik", "görüşərik", "goruserik", "bye", "goodbye", "çıxıram", "sonra"],
+      "text": "Hələlik! Nə vaxt istəsəniz yaza bilərsiniz. Övladınızla bağlı sualınız olarsa buradayam."
+    },
+    {
+      "id": "disclaimer_medical",
+      "title": "Tibbi məsuliyyət (qısa xəbərdarlıq)",
+      "topic": "safety",
+      "intent": ["disclaimer"],
+      "keywords": ["diaqnoz qoy", "diaqnoz", "müalicə", "mualice", "dərman", "derman", "resept", "antidepresan"],
+      "text": "Mən tibbi diaqnoz qoymuram və resept/dərman təyin etmirəm. Ümumi məlumat və gündəlik strategiyalar verə bilərəm. Təcili və ya ağır vəziyyətdə həkimə müraciət etmək daha doğrudur."
+    },
+    {
+      "id": "safety_emergency",
+      "title": "Təcili təhlükə halları",
+      "topic": "safety",
+      "intent": ["safety"],
+      "keywords": ["qıcolma", "qicolma", "huşunu itirdi", "husunu itirdi", "boğulur", "bogulur", "qanaxma", "intihar", "ölüm", "olum", "dayanmır özünə vurur"],
+      "text": "Əgər huş itirmə, qıcolma, boğulma, ağır yaralanma və ya özünə/başqasına ciddi zərər riski varsa, dərhal təcili yardıma müraciət edin. Belə hallarda vaxt itirmədən tibbi yardım daha doğrudur."
+    },
+
+    {
+      "id": "about_autism",
+      "title": "Autizm nədir?",
+      "topic": "education",
+      "intent": ["autism_basics"],
+      "keywords": ["autizm nədir", "autizm nedir", "asd nədir", "spektr", "autizm haqqında", "autizm haqqinda"],
+      "text": "Autizm Spektr Pozuntusu (ASP/ASD) inkişafla bağlı bir fərqlilikdir. Ünsiyyət və sosial qarşılıqlı əlaqədə çətinliklər, təkrarlanan davranışlar və sensor həssaslıqlar (səs, işıq, toxunuş və s.) ola bilər. Hər uşaq fərqlidir. Erkən müdaxilə, strukturlaşdırılmış rutin və peşəkar dəstək uşağın inkişafına kömək edir."
+    },
+    {
+      "id": "autism_signs",
+      "title": "Autizmin mümkün əlamətləri",
+      "topic": "education",
+      "intent": ["autism_basics"],
+      "keywords": ["əlamət", "elamet", "necə bilək", "nece bilek", "şübhə", "subhe", "autizm əlamətləri"],
+      "text": "Mümkün əlamətlər fərqli ola bilər: adla çağıranda az reaksiya, göz təmasının zəif olması, sözlərin gecikməsi, təkrarlanan hərəkətlər (əl yelləmə, fırlanma), rutin dəyişəndə kəskin narahatlıq, səs/işığa həssaslıq. Əlamət varsa, ən doğrusu inkişaf mütəxəssisi və uşaq psixiatrı/psixoloqu ilə qiymətləndirmədir."
+    },
+    {
+      "id": "diagnosis_path",
+      "title": "Diaqnoz prosesi və ilk addımlar",
+      "topic": "diagnosis",
+      "intent": ["autism_support"],
+      "keywords": ["diaqnoz", "yeni diaqnoz", "hara getməli", "hara getmeli", "mütəxəssis", "muetexassis", "qiymətləndirmə"],
+      "text": "İlk addım uşağın inkişafının peşəkar qiymətləndirilməsidir. Sonra evdə rutin, ünsiyyət dəstəyi və uyğun terapiya planı qurulur. Erkən müdaxilə çox önəmlidir. Siz tək deyilsiniz — addım-addım planla irəliləmək daha rahatdır."
+    },
+
+    {
+      "id": "triage_generic_distress",
+      "title": "Ümumi narahatlıq / səbəbi bəlli deyil",
+      "topic": "triage",
+      "intent": ["triage"],
+      "keywords": ["bilmirəm", "bilmirem", "səbəbsiz", "sebebsiz", "qəfil", "qefil", "birdən", "birden", "ümumi", "umumi"],
+      "text": "Başa düşürəm. Bəzən səbəb dərhal görünmür. İlk addım təhlükəsizlik və stimulu azaltmaqdır.\n\nİlkin addımlar:\n1) Uşağı sakit və təhlükəsiz yerə aparın.\n2) Səsi/işığı azaldın (mümkünsə sakit otaq).\n3) Qısa cümlə: “Sənə kömək edəcəyəm.”\n4) Ağrı/diskomfort ehtimalını yoxlayın (qarın, diş, temperatur, aclıq/susuzluq, bez/paltar).\n\nDaha dəqiq kömək üçün: yaş neçədir, nə vaxt başladı, nə tetiklədi (səs/işıq/qoxu/toxunuş/rutin)?"
+    },
+    {
+      "id": "triage_crying_sits_down",
+      "title": "Uşaq ağlayır / yerə oturub ağlayır",
+      "topic": "triage",
+      "intent": ["triage"],
+      "keywords": ["ağlayır", "aglayir", "yerə oturub", "yere oturub", "yerə oturur", "yere oturur", "hönkürür", "honkurur"],
+      "text": "Başa düşürəm, bu çətin ola bilər. Yerə oturub ağlama çox vaxt sensor yüklənmə, yorğunluq, ağrı/diskomfort və ya istəyi ifadə edə bilməmə ilə bağlı olur.\n\nİlkin addımlar:\n1) Təhlükəsizliyi təmin edin.\n2) Stimulu azaldın (sakit yer, işığı azaltmaq, səs-küyü kəsmək).\n3) Uzun izah etməyin, qısa deyin: “Sənə kömək edəcəyəm.”\n4) Ağrı/diskomfort yoxlayın.\n\nDəqiqləşdirmək üçün: bu daha çox harada olur (çöldə/evdə)? Səs-küy olanda qulaqlarını tuturmu?"
+    },
+    {
+      "id": "triage_meltdown_general",
+      "title": "Qışqırır / özünü atır (meltdown ola bilər)",
+      "topic": "triage",
+      "intent": ["triage"],
+      "keywords": ["qışqırır", "qisqirir", "bağırır", "bagirir", "özünü atır", "ozunu atir", "isterika", "meltdown"],
+      "text": "Bu vəziyyət “meltdown” ola bilər: uşaq bilə-bilə deyil, həddindən artıq yüklənmədən reaksiya verir.\n\nİlkin addımlar:\n1) Uşağı təhlükəsiz yerə aparın.\n2) Səs tonunu aşağı saxlayın, çox danışmayın.\n3) Fiziki zərər riski varsa ətrafı təhlükəsizləşdirin.\n4) Sakitləşəndən sonra tetikleyicini tapın (səs, rutin dəyişikliyi, aclıq, yorğunluq).\n\nDəqiqləşdirmək üçün: nə vaxt başlayır və nə qədər çəkir?"
+    },
+    {
+      "id": "triage_self_harm_general",
+      "title": "Başını vurur / özünə zərər",
+      "topic": "triage",
+      "intent": ["triage"],
+      "keywords": ["başını vurur", "basini vurur", "özünə vurur", "ozune vurur", "dişləyir", "disleyir", "özünü dişləyir"],
+      "text": "Bu davranış çox vaxt ağrı, sensor yüklənmə və ya istəyi ifadə edə bilməmə ilə bağlı olur. İlk məqsəd təhlükəsizlikdir.\n\nİlkin addımlar:\n1) Başını vurduğu səthi yumşaldın (yastıq və s.).\n2) Stimulu azaldın.\n3) Nə vaxt baş verdiyini qeyd edin (yeməkdən sonra? səs-küydə? tualet vaxtı?).\n\nƏgər ciddi zərər riski varsa və dayanmırsa, mütəxəssis və təcili yardım daha doğru seçimdir."
+    },
+
+    {
+      "id": "sensory_overload_general",
+      "title": "Sensor yüklənmə (səs/işıq/qoxu)",
+      "topic": "sensory",
+      "intent": ["autism_support"],
+      "keywords": ["sensor", "səs", "ses", "işıq", "isiq", "qoxu", "iy", "toxunma", "həssaslıq", "hessasliq", "qulağını tutur", "qulagini tutur"],
+      "text": "Sensor yüklənmədə uşağın beyni stimulu “həddən artıq” qəbul edir. İlk hədəf stimulu azaltmaqdır.\n\nPraktik:\n- Sakit yerə keçin, işığı azaldın.\n- Səs-küylü mühitdə qulaqcıq kömək edə bilər.\n- Güclü qoxulu təmizləyicilər/parfümü azaltmaq faydalıdır.\n\nDəqiqləşdirmək üçün: daha çox səs, işıq, yoxsa qoxu tetikləyir?"
+    },
+    {
+      "id": "communication_nonverbal",
+      "title": "Danışmır / az danışır",
+      "topic": "communication",
+      "intent": ["autism_support"],
+      "keywords": ["danışmır", "danismir", "söz demir", "soz demir", "gec danışır", "gec danisir", "nitq", "loqoped", "PECS", "şəkil kart"],
+      "text": "Danışıq gecikməsi varsa, alternativ ünsiyyət üsulları (jest, şəkil kartları/PECS) çox faydalı ola bilər. Uşağı məcbur etmədən, hər ünsiyyət cəhdini müsbət gücləndirmək vacibdir. Loqoped/nitq terapiyası erkən mərhələdə daha təsirlidir."
+    },
+    {
+      "id": "eye_contact",
+      "title": "Göz təması qurmur",
+      "topic": "communication",
+      "intent": ["autism_support"],
+      "keywords": ["göz təması", "goz temasi", "baxmır", "baxmir", "üzümə baxmır", "uzume baxmir"],
+      "text": "Bəzi uşaqlar üçün göz təması yorucu ola bilər. Məcbur etmək əks təsir verə bilər. Oyun zamanı oyuncağı göz səviyyənizə gətirib təbii şəkildə diqqətini toplamaq daha uyğundur."
+    },
+    {
+      "id": "stimming_general",
+      "title": "Təkrarlanan hərəkətlər (stimming)",
+      "topic": "behavior",
+      "intent": ["autism_support"],
+      "keywords": ["əl yelləyir", "el yelleyir", "fırlanır", "firlanir", "stimming", "stim", "təkrarlayır", "tekrarlayir"],
+      "text": "Stimming çox vaxt uşağın özünü tənzimləmə üsuludur. Zərər vermirsə, tam qadağan etmək lazım olmur. Əgər təhlükə yaradırsa, daha təhlükəsiz alternativ stimullar (stress topu, yumşaq oyuncaqlar) təklif etmək olar."
+    },
+
+    {
+      "id": "routines_transitions",
+      "title": "Rutin pozulanda ağlayır / keçidlər çətin olur",
+      "topic": "routine",
+      "intent": ["autism_support"],
+      "keywords": ["rutin", "rejim", "dəyişiklik", "deyisiklik", "keçid", "kecid", "birdən dəyişdi", "birdən deyisdi"],
+      "text": "Rutin dəyişiklikləri autizmli uşaqlar üçün çətin ola bilər. Keçidləri asanlaşdırmaq üçün:\n- əvvəlcədən xəbər verin (5 dəq sonra, 2 dəq sonra)\n- vizual cədvəl/taymer istifadə edin\n- alternativi əvvəlcədən göstərin.\n\nDəqiqləşdirmək üçün: ən çox hansı keçid çətindir (oyundan yeməyə, evdən çölə, yatmağa)?"
+    },
+    {
+      "id": "public_places_general",
+      "title": "İctimai yerlərdə çətinlik (park, market, avtobus)",
+      "topic": "social",
+      "intent": ["autism_support"],
+      "keywords": ["market", "park", "avtobus", "qonaqlıq", "toy", "adam çox", "səs-küy", "ses-kuy"],
+      "text": "İctimai yerlərdə səs, işıq və izdiham sensor yüklənmə yarada bilər. Praktik: qısa müddətlik çıxışlar, qulaqcıq, əvvəlcədən plan, sakit künc/çıxış yolu. Uşaq narahat olarsa, prioritet sakitləşdirməkdir."
+    },
+    {
+      "id": "school_general",
+      "title": "Məktəb/bağça uyğunlaşma",
+      "topic": "education",
+      "intent": ["autism_support"],
+      "keywords": ["məktəb", "mekteb", "bağça", "bagca", "müəllim", "muellim", "sinif", "dərs", "ders"],
+      "text": "Məktəb mühitində struktur, vizuallar və aydın qaydalar çox kömək edir. Müəllimlə qısa gündəlik kommunikasiya qurmaq, uşağın güclü tərəflərini və tetikleyicilərini paylaşmaq faydalıdır."
+    },
+
+    {
+      "id": "sleep_general",
+      "title": "Yuxu problemi (ümumi)",
+      "topic": "sleep",
+      "intent": ["autism_support"],
+      "keywords": ["yatmır", "yatmir", "gecə oyanır", "gece oyanir", "yuxu", "işıq yanıq", "isiq yanir"],
+      "text": "Yuxu üçün əsas prinsip: eyni saatlar, ekranı azaltmaq, sakit rutin, otağı qaranlıq və rahat etmək. Gecə oyananda işıq yandırmadan, çox danışmadan yenidən yatağa yönləndirmək faydalıdır."
+    },
+    {
+      "id": "food_selectivity_general",
+      "title": "Yemək seçiciliyi (ümumi)",
+      "topic": "food",
+      "intent": ["autism_support"],
+      "keywords": ["yemək", "yemek", "seçir", "secir", "qida", "dad", "tekstura", "qoxu", "fast-food"],
+      "text": "Yemək seçiciliyi çox vaxt sensor səbəblərlə bağlıdır. Məcbur etmək əks təsir verə bilər. Kiçik porsiya, tanış qida ilə yanaşı təqdimat, və mərhələli alışdırma daha uyğundur."
+    },
+    {
+      "id": "toilet_general",
+      "title": "Tualet mövzusu (ümumi)",
+      "topic": "hygiene",
+      "intent": ["autism_support"],
+      "keywords": ["tualet", "bez", "pampers", "unitaz", "sidik", "nəcis", "necis"],
+      "text": "Tualet təlimində ardıcıllıq və təzyiqsiz yanaşma vacibdir. Vizual cədvəl, taymer və mükafatlandırma kömək edə bilər. Uşaq qorxursa, əvvəlcə qorxunu azaltmaq (mərhələli tanışlıq) daha doğrudur."
+    },
+    {
+      "id": "screen_time_general",
+      "title": "Telefon/planşet (ümumi yanaşma)",
+      "topic": "behavior",
+      "intent": ["autism_support"],
+      "keywords": ["telefon", "planşet", "planset", "youtube", "ekran", "oyun", "asılılıq", "asililiq"],
+      "text": "Ekranı birdən qadağan etmək çətin ola bilər. Vizual taymerlə vaxt qoymaq, əvvəlcədən xəbər vermək, alternativ fəaliyyət planı hazırlamaq daha praktikdir. Dəyişiklik zamanı qısa və aydın qayda işləyir."
+    },
+    {
+      "id": "doctor_visit_general",
+      "title": "Həkimə/stomatoloqa gedəndə çətinlik",
+      "topic": "health",
+      "intent": ["autism_support"],
+      "keywords": ["həkim", "hekim", "stomatoloq", "iynə", "iyne", "analiz", "müayinə", "muayine"],
+      "text": "Əvvəlcədən hazırlıq çox kömək edir: evdə “həkim oyunu”, vizual izah, klinikanın şəklini göstərmək, qısa səfərlə alışdırmaq. Müayinə günü sevdiyi rahatlaşdırıcı əşyanı götürmək faydalıdır."
+    },
+    {
+      "id": "offtopic",
+      "title": "Əlaqəsiz suallar (off-topic)",
+      "topic": "offtopic",
+      "intent": ["offtopic"],
+      "keywords": ["futbol", "siyasət", "hava necədir", "hava", "serial", "film", "instagram", "tiktok", "oyun", "meme"],
+      "text": "Mən əsasən autizm və uşaq inkişafı mövzularında dəstək üçün hazırlanmışam. Autizm, davranış, sensor həssaslıq, rutin, məktəb və gündəlik qayğı ilə bağlı sualınızı yazın — kömək edim."
+    },
+    {
+      "id": "clarify",
+      "title": "Dəqiqləşdirmə istə (universal)",
+      "topic": "assist",
+      "intent": ["clarify"],
+      "keywords": ["başa düşmədim", "basa dusmedim", "dəqiqləşdir", "deqiqlesdir", "uyğun deyil", "uygun deyil"],
+      "text": "Daha dəqiq cavab üçün 3 detal lazımdır: (1) yaş neçədir, (2) nə tetikləyir (səs/işıq/qoxu/toxunuş/rutin), (3) nə baş verir və nə qədər çəkir. Yazsanız, daha uyğun yönləndirərəm."
+    }
+  ],
+
+  "problems": [
+    {
+      "id": 1,
+      "title": "Autizmli fərdlərlə davranış mexanizmi",
+      "image": "afdm.png",
+      "description": "Autizmli uşaqlarla düzgün davranış mexanizmini tətbiq etmək üçün ilk növbədə uşağın keçdiyi inkişaf yolunu və gündəlik praktikasını düzgün anlamaq lazımdır. Öz övladınıza kömək edə bilməyin ilk mərhələsi onların təcrübəsini, dünyanı necə hiss etdiklərini başa düşməkdən keçir. Autizmli fərdlərin sensor məlumatları qəbul etmə sistemi bizim sistemimizdən xeyli fərqlənə bilər. Buna görə də əvvəlcə eşitmə prosesinə nəzər salaq.\nBəzi autizmli fərdlər səsləri bizim eşitdiyimizdən qat-qat yüksək eşidə bilərlər və ya səsləri kəsik-kəsik, pozulmuş telefon bağlantısı kimi, tam şəkildə eşitməyə bilərlər. Öz övladınızda bu vəziyyəti müşahidə edə bilərsiniz, əgər evdən kənara çıxdıqda (küçəyə, marketə, insanların daha çox olduğu məkanlara və ya səsin daha çox olduğu yerlərə getdikdə) qulaqlarını əlləri ilə tutursa və ya sözün yalnız əvvəlini deyib, sonunu demədiyini müşahidə edirsinizsə. Bu əlamətlər eşitmə ilə bağlı sensor çətinliklərin mövcud olduğunu göstərə bilər.\nQoxu hissi ilə bağlı sensor çətinliklər**\nƏgər qoxu hissi barədə danışsaq, bizim gündəlik olaraq alışdığımız və adi qəbul etdiyimiz qoxular bəzi autizmli uşaqlar üçün dözümsüz və ya çox kəskin hiss edilə bilən qoxular ola bilər. Siz müşahidə edə bilərsiniz ki, uşağınız qəfil olaraq, heç bir görünən səbəb olmadan aqressiv reaksiya göstərir, yaxud sürətlə sağa-sola qaçır, tullanır və s. Bu davranışların bir hissəsi məhz qoxu ilə bağlı sensor həssaslıqdan qaynaqlana bilər məsələn:\n•Hər hansı bir meyvə və ya tərəvəz qoxusu;\n•Hər hansı bir çiçək və ya bitki qoxusu;\n•Gündəlik evdə hazırladığınız yeməyin qoxusu;\n•İstifadə etdiyiniz təmizlik vasitələrinin qoxusu və s.- Yəni, bizim üçün tamamilə adi və heç bir qıcıqlandırıcı təsiri olmayan qoxular, autizmli bir fərd üçün kəskin narahatlıq yarada, baş ağrısına səbəb ola və ya güclü sensor yüklənmə yarada bilər.\nBuna görə də bəzi autizmli uşaqların müəyyən davranışlarının və hərəkətlərinin səbəbi qoxu həssaslığı ilə bağlı ola bilər və bu səbəbi anlamaq onların davranışına daha düzgün yanaşmanı təmin edir.\n**Toxunma hissi ilə bağlı sensor çətinliklər**\nƏgər toxunma hissi barədə danışsaq, bəzi uşaqlar hər hansısa paltarı geyinməkdən imtina edə bilər. Bu, toxunma həssaslığı olan uşaqlarda çox yayılmış haldır. Bu vəziyyətin izahını bu şəkildə verə bilərik:\nTəsəvvür edin ki, sizin temperaturunuz çox yüksəkdir və dərinizdə yanma hissi yaranır. Belə vəziyyətdə kiçik bir toxunuş belə sizə narahatlıq verə bilər. Bu səbəbdən toxunma həssaslığı olan uşaqlar paltarın və ya digər əşyaların bədənlərinə toxunmasından narahatlıq hiss edirlər və bunu çox həssas qəbul edirlər.\nBu nüansları qeyd etməyimizin səbəbi budur ki, əgər evdə autizmli uşağınız varsa, onunla davranış mexanizmini düzgün qurmaq üçün sensor həssaslıqlarını  mütləq nəzərə almalısınız.\nDavranış mexanizmi mərhələli şəkildə tətbiq olunmalıdır.\nBirinci addım: Uşağın boy səviyyəsində və qarşısında durursunuz. Bu, uşağın diqqətini toplamasına və sizinlə ünsiyyətə açıq olmasına kömək edir.\nİkinci addım: Uşağa nə edəcəyinizi izah edirsiniz. Məsələn, onu gəzintiyə aparacaqsınız, duş almasını istəyirsiniz və ya hansısa paltarı geyindirəcəksiniz. Uşağa nə baş verəcəyini aydın şəkildə izah etmək vacibdir.\nÜçüncü addım: Uşağın icazəsini almaq. Məsələn, soruşursunuz: “Olar səninlə həyətə gedək?” və ya “Duş almaq istəyirsən?” Uşağın razılığı alındıqdan sonra həmin fəaliyyət həyata keçirilir. Bu yanaşma uşağa idarəetmə və seçim imkanı verir, onun narahatlığını azaldır və davranışı düzgün formalaşdırmağa kömək edir. Autizmli uşaqlarla davranış mexanizmi zamanı güvən çox önəmlidir. Əgər siz uşağı tabe etməyə çalışırsınızsa və ya hər hansı bir bacarığı öyrətmək üçün onu məcbur edirsinizsə bu halda uşaqla sizin aranızda güvən yaranmır. Güvən olmadıqda isə uşaq sizə inanmır və nəticə etibarilə sizinlə qarşılıqlı ünsiyyətə girmir."
+    },
+    {
+      "id": 2,
+      "title": "Ev şəraitinin autizmli fərd üçün düzgün şəkildə qurulması",
+      "image": "ev-seraiti.png",
+      "description": "Əgər sizin autizmli bir övladınız varsa, evdə nəzarət səbəbindən baş verən qarşıdurmaların aradan qaldırılması çox önəmlidir. Çünki autizmli uşaqlar evin müxtəlif hissələrində valideynlə konfliktə səbəb olan davranışlar göstərə bilərlər.\n**Mətbəx nümunəsi**\nAutizmli uşaq:\n• mikrodalğalı sobanın və ya digər mətbəx alətlərinin düymələri ilə oynamağı sevə bilər;\n• mətbəx ləvazimatlarını (çəngəl, qaşıq, bıçaq və s.) yan-yana düzməkdən zövq ala bilər;\n• dolablardan duz, şəkər və ya digər ərzaqları çıxarıb yerə tökə və ya onlarla oynaya bilər;\n• soyuducunu açıb yumurtaları yerə ata və ya onun yeməsini istəmədiyiniz ərzaqları götürüb yeyə bilər.\nBelə halların qarşısını almaq üçün:\n• soyuducunu kilidli edə bilərsiniz;\n• mətbəx şkaflarına xüsusi uşaq kilidləri qoya bilərsiniz. Bunlar həm uşağın təhlükəsizliyini təmin edəcək, həm də sizin aranızda konflikt yaşanmamasına kömək edəcək.\n**Vanna otağı nümunəsi**\nAutizmli uşaqlar şampun, duş geli kimi qabdakı vasitələri yerə tökməyi, suyu açıb su ilə uzun müddət oynamağı xoşlayırlar. Buna görə, bütün yuyunma vasitələrini kilidli şkafda saxlaya bilərsiniz, əgər suyu həddindən artıq açırsa və bu sizi narahat edirsə, vanna otağına gedən əsas su xəttini müvəqqəti bağlamaq mümkündür. Uşaq suyun gəlmədiyini gördükdə artıq orada oynamaqdan imtina edəcək və bu, mübahisələrin qarşısını alacaq. Əgər qonaq otağında jurnal stolunun üzərində hər hansı diskləriniz, jurnal və ya kitablarınız varsa və uşaq həmin kitabların vərəqlərini cırırsa, diskləri fırladıb onlarla oynayırsa, bu zaman həmin əşyaları evdə daha hündür bir yerə — məsələn, şkafın üstünə və ya uşaq üçün əlçatmaz olan rəflərə yerləşdirə bilərsiniz ki, uşaq onları görməsin və götürə bilməsin. Beləliklə, əlavə gərginlik, mübahisə və güc sərf etmək məcburiyyəti ortadan qalxacaq. Bu enerjini isə daha çox uşağın inkişafına, onunla müsbət və güvənə əsaslanan münasibət qurmağa yönəldə biləcəksiniz."
+    },
+    {
+      "id": 3,
+      "title": "Hansı davranışlar necə aradan qaldırılmalıdır?",
+      "image": "davranishlar.png",
+      "description": "Uşaqlar ətraf aləmlə qarşılıqlı əlaqə qurmağa başladıqları ilk andan etibarən ətrafda baş verənləri öyrənməyə başlayırlar, onlar üçün hər şey yenidir və maraqlıdır (dad olaraq, qoxu olaraq və s.). Bununla yanaşı uşaqlarda belə bir istək yaranır ki, əgər mən hər hansı hərəkəti edərəmsə, qarşıdakı insandan hansı reaksiya gələcək. Bizim dramatik reaksiyamızı görmək üçün uşaqlar müxtəlif variantlarda davranışlar göstərə bilərlər, məsələn: Sidiyini tualetə deyil, evin döşəməsinə edə bilər, divarlara şəkil çəkə bilər; tüpürə bilər, yemək boşqabını sındıra bilər və ya suyu yerə tökə bilər və s.\n**Uşaq sidiyini tualetə deyil, döşəməyə edəndə necə davranmalı?**\nƏgər uşaq sidiyini tualetə yox, döşəməyə edirsə, ilk növbədə sakit qalmağa və rahat olmağa çalışın. Özünüzə xatırladın ki, bu, sadəcə təmizlənə bilən bir dağınıqlıqdır və böyük bir problem deyil. Eyni zamanda, bu davranışın sizin üçün önəmli və ya narahatedici olduğunu sözlə ifadə etməyin.“Niyə belə etdin?” kimi suallar verməyin. Qışqırmayın, sərt danışmayın, jest və mimikalarla kəskin reaksiya göstərməyin.Tamamilə sakin və neytral qalmağa çalışın, ümumiyyətlə reaksiya verməyin. Uşaq sidiyini etdikdən sonra 1–2 dəqiqə gözləyin, sonra sakit şəkildə, onun paltarlarını dəyişin, döşəməni təmizləyin.\n**Uşaq divarlara çəkəndə necə davranmalı?**\nƏgər uşaq divara şəkil çəkirsə, onun qarşısında dayanaraq divarla uşaq arasında fiziki baryer yaradın. Sakit və aydın şəkildə izah edin ki, divara çəkmək olmaz və bunun səbəbini qısa şəkildə söyləyin. Uşaqdan müxtəlif reaksiyalar gələ bilər: qışqırmaq, vurmaq və ya ağlamaq. Bu hallarda:\n• Sakitliyi qoruyun;\n• İzah etmə tonunu daha yavaş və yumşaq edin;\n• Tələsmədən, qışqırmadan davam edin;\n• Uşaq sakitləşdikdən sonra alternativ təklif edin: lövhə və ya vərəq verə bilərsiniz ki, orada çəksin. Ümumiyyətlə:\n1) Əgər uşaq özünə, gigiyenasına zərər verəcək davranış göstərirsə;\n2) Əgər öz yaşıdlarına və ya ətrafdakı insanlara zərər verirsə;\n3) Əgər ətraf aləmə və ya əşyalara zərər verirsə,bu zaman bu davranışları aradan qaldırırıq, yəni bu davranışlara mütləq sərhəd qoyulmalıdır və bu davranışların aradan qaldırılma metodikası yuxarıda göstərdiyimiz iki misal əsasında uyğun şəkildə aparılır."
+    },
+    {
+      "id": 4,
+      "title": "İsterika halları və fiziki şiddət",
+      "image": "isterika.png",
+      "description": "İsterika həyata keçməsini istədiyimiz hadisə və ya əldə etmək istədiyimiz “nəyəsə”daha tez əldə etmə istəyini bildirən bir hərəkət fomasıdır. Yəni, isterika - “mən istədiyimi indi bu dəq. əldə etməliyəm!” hökmüdür. \nİsterika dedikdə:\n•Ağlama;\n•Qışqırma;\n•“Əmr” şəklində danışma;\n•Başlarına dəfələrlə vurma və ya əllərini dişləmə;\n•Başını harasa vurma;\n•Ağlayıb, sizi vurma;\n•Əşyaları yerə atma və s. kimi davranış formaları nəzərdə tuturuq.\n\rİstənilən səviyyədə verbal və ya qeyri-verbal ünsiyyət qurma qabiliyyəti olan autizm spektrli insanlar da istədiyini daha tez əldə etmək üçün bu “kommunikasiya üsulu”-na əl atır. İsterika və göz yaşlarını azaltmağın əsas yolu bu zaman verdiyimiz reaksiyanı dəyişdirməkdən ibarətdir.\nFərz edək ki, uşaq sizdən qapını açmağınızı istəyir və sizin əlinizlə qapıya işarə edir və siz həmin anda uşaqla çölə çıxa bilmirsiniz. Çox gecdir və ya gücü qar, yağış yağır.\n1. İlk öncə uşağa izah edirsiniz ki, hal-hazırda çölə çıxa bilməyəcəksiniz və səbəbləri izah edirsiniz.\n 2. Əgər uşaq bu vəziyyətdə isterika davranışı göstərirsə, davranışlarınızı kontrol altında saxlayırsınız. Bu zaman reaksiyanız soyuq və sakit olur, yəni əsla hiddətlənmədən və ya qəzəblənmədən izah etməyə davam edirsiniz. \n 3. Sonra ağladığı zaman onu anlamadığınızı, amma kömək etmək istədiyinizi bidirirsiniz.\n 4. İzahatı verərkən hərəkətlərinizi yavaşladırsınız, səbəbləri sadə və aydın şəkildə izah edirsiniz.\n 5. Alternativ fəaliyyətlər təklif edirsiniz, məsələn, park şəkli çəkmək park şəkilli pazl qurmaq.\n**Bütün ağlamalar isterika deyil:** Bəzən uşaq fiziki diskomfortdan da ağlaya bilər. Bu zaman (yıxılıb və ya harasısa ağrayır) mütləq uşağı sakitləşdirmək lazımdır. Xronik qəbzlik və ya diareya, yeməkdə seçiciliyi göz yaşlarına səbəb ola bilər.\n**Səbəbsiz yaranan göz yaşları:** Bəzən həddindən artıq yorğunluqdan da göz yaşları yarana bilir. Ola bilər ki, gün ərzində uşaq müxtəlif yerlərə gedir (Kurs və ya terapiya üçün) və evə döndüyündə evdə kifayət qədər insan varsa, yaranan “səs-küy”-ə müdaxilə etmək üçün ağlayır və bu onun stressini çıxarma şəklidir.\n**Qeyri-elastiklik:** Autizmli fərdlər yaşadığı gün rutininin dəyişməz olaraq qalmasının tərəfdarıdır, kiçik bir dəyişiklik belə isterika və ya göz yaşına səbəb ola bilir. Bu zaman isterikanın deaktivizasiyası üçün tətbiq etdiyimiz metodikanı eynilə tətbiq edirik, sadəcə izahat verdiyimiz zaman bilərəkdən bunu etmədiyimizi və bu davranışımızın ona bu formada təsir edəcəyini bilmədiyimizi ifadə edirik. Eyni zamanda uşağın elastikliyi üzərində çalışırıq.\nBundan əlavə, bəzən autizmli uşaqlar fiziki şiddət göstərə bilirlər. Bunun bir neçə səbəbi ola bilər — yəni uşaqlar bu davranışı müxtəlif məqsədlərlə nümayiş etdirə bilirlər:\n1. İstəyini bildirmək üçün — uşaq sözlə ifadə edə bilmədiyi ehtiyac və ya istəyini fiziki davranış vasitəsilə çatdırmağa çalışır.\n2. Reaksiyanızı görmək üçün — uşaq sizin emosional reaksiyanızı müşahidə etmək və diqqətinizi qazanmaq istəyir.\n3. Sensor problemlərə görə — vurma və ya dişləmə kimi davranışlar onun sensor sistemini tənzimləməyə kömək edir.\n4. Özünün müdafiə vasitəsi kimi — bəzi autizmli uşaqlar digər insanların onlara qulaq asması üçün bu yolu ideal bir çıxış yolu kimi görürlər.\nOna görə də əgər övladınız bu səbəblərdən biri və ya bir neçəsi ilə bağlı olaraq fiziki şiddət tətbiq edirsə, düzgün strategiyanın qurulması vacibdir.\n**Strategiyalar:**\n1. Fiziki davranışı qeyri-effektiv etmək.\nUşaq istədiyini fiziki şiddət vasitəsilə əldə edə bilməməlidir. Yəni bu davranış heç bir nəticə verməməlidir və kommunikasiya vasitəsi kimi istifadə olunmamalıdır. Ona açıq şəkildə bildirin ki, bu davranışı anlamırsınız.\n2. Özünüzü təhlükədən qorumaq.\nƏgər uşaq balacadırsa və sizə yaxınlaşıb vura, saçınızı çəkə bilirsə, ayaq üstə dayanıb hərəkəti əngəlləyin və dərhal araya məsafə qoyun. Bunun üçün yastıq, top və ya başqa təhlükəsiz əşya istifadə edə bilərsiniz ki, uşaq sizə toxuna bilməsin.\n3. Alternativ enerji boşaltma imkanı yaratmaq.\nUşağa başqa bir otaqda top üzərində tullanmağı, batutda hərəkət etməyi və ya başqa aktiv fiziki fəaliyyətləri təklif edə bilərsiniz ki, enerjisini sizə yönəltmək əvəzinə hərəkətdə boşaltsın.\n4. Düzgün kommunikasiya formasını öyrətmək.\nUşaq qeyri-verbal və ya verbal şəkildə düzgün ünsiyyət qura bildikdə, onu tərifləyin və güclü emosional dəstək verin."
+    },
+    {
+      "id": 5,
+      "title": "Tualet vərdişlərinin yaradılması",
+      "image": "toilet_training.png",
+      "description": "Adətən, biz uşaqlarımızda tualet vərdişi yaratmaq istərkən, ya müəyyən zaman aralığından bir uşağı tualetə getməyə və 15 – 20 dəq oturmağa təşviq edirik. Bu üsulla tualet təlimini öyrətmək həm uşaq, həm də valideyn üçün çətin ola bilir. Bu səbəbdən, tam əks təcrübə yaradırıq.Təzyiqi azldırıq. Əgər övladınıza tez bir zamanda tualet öyrətmək üçün kənardan təzyiq hiss edirsinizsə, biz sizə dərhal dayandırmağı təklif edərdik. Uşağınıza tualet təlimi öyrətmək üçün nə qədər vaxt lazım olduğnu başqalarının diktə etməsinə imkan verməyin. Uşağınız unikaldır, əyləncəli və rahat olmağa diqqət yetirin; bunun indi baş verməsi lazım deyil, çünki uşağınız neçə yaşında olursa olsun, ona kömək etmək üçün vaxtınız var. Əgər tualet təlimini öyrətmək üçün çox vaxt sərf etmisinizsə və uşağınızın bunu qəbul etmədiyini hiss edirsinizsə, bu barədə necə hiss etdiyinizi bilmək üçün özünüzə nəzər yetirin. Əgər əsəbi və qəzəbli olduğunuzu hiss edirsinizsə, bu zaman siz uşağa kömək edə bilməzsiniz. Çünki, bu qəzəbi hər hansı bir şəkildə ifadə edirik və uşaq bunu görür və o da gərginləşir. İnsan gərgin olduğu zamanda və ya tələsdiyində  “rahat” olmadığı üçün tualetini edə bilmir, özünə qapanma baş verir. Yəni, bir sözlə uşağa tualet təlimini aşıladığımız zaman gərgin olmamağa (uşağa təzyiq göstərməməyə) diqqət edirik.\nƏgər siz evdə və ya məktəbdə dayə və ya nənə, baba ilə uşağı məcburən tualetə aparmısınızsa, çox güman ki, uşaqda tualeti sevmirəm” düşüncəsi var. Uşağınızın düşüncə tərzini dəyişdirmək üçün ən az 3 həftə tualet təliminə ara verməyi və sonra bu bölümdəki strategiyalarta uyğun şəkildə yenidən başlamağı məsləhət görürük.\n**Nə vaxt tualet təliminə başlaya bilərsiniz?**\nUşaq aşağıda sadaladığımız mərhələlərdən keçirsə, tualet təliminə başlaya bilərsiniz:\n•Yaşı 2,6 yaş və yuxarı həddədir;\n•Ən az iki dəqiqəlik interaktiv diqqət diapozonu var (diqqətini sizinlə interaktiv şəkildə bölüşməsi);\n•Ehtiyac duyduğunu hiss edə biləcəyi təqdirdə sizə az da olsa informasiyanı ötürməyə çalışması.\n**Necə başlasaq effekt ala bilərik?**\nUşağınızın təbii ritmlərinin nə olduğunu öyrənin. Uşaq maye qəbul etdikdən nə qədər müddət sonra sidik edir? Hər sidik arasında orta vaxt nə qədərdir? Adətən günün hansı yarısında (saatında) nəcis edir? Gündə neçə dəfə nəcis edir? Bu məlumatlar əsasında tualet gündəliyi yaradırıq. Bunu etmək üçün isə ən əlverişli vaxt ya məktəb tətili, ya da üç günlük həftə sonu tətili ola bilər.\n**Tualet planı:**\n•Uşağa tualetə getməyin tam olaraq nə demək olduğunu öyrədin;\n•Tualet təliminə başlağıdınız andan etibarən mütləq bezi çıxarın və uşağa bez əvəzinə alt paltar geyindirməyə başlayın;\n•Karşoku və ya tualeti uşağın sevdiyi cizgi qəhrəmanları stikerləri, şarlar və s. kimi sevdiyi əşyalarla bəzəyin ki, uşağın tualet təlimini keçməsi onun üçün əyləncəli bi aktivizasiya halına gəlsin.\n•Əgər evdə kənar şəxslər yoxdursa, ana qız üçün, ata isə oğlan üçün rol model ola bilər, yəni tualetə gedib, çıxdıqdan sonra sevincli bir şəkildə uşağa tualetə getdiyinizi və buna görə də özünüzü necə rahat hiss etdiyinii bildirin ki, uşaq bu prosesin stresli bir proses olduğunu düşünməsin və artıq müstəqil şəkildə özü tualetə getməyə başlasın."
+    },
+    {
+      "id": 6,
+      "title": "Duş qəbulu",
+      "image": "shower.png",
+      "description": "Bəzən uşaqlarımız vanna otağına girməkdən tamamilə imtina edir. Bunun bir neçə səbəbi ola bilər:\n•Vanna otağında havanı təmizləmək üçün olan “vinteliyasiya”-nın səsi uşağa mane ola bilər;\n•Vanna otağını təmizləmək üçün istifadə etdiyiniz təmizləyici vasitələrin çox tünd qoxuları olduğu üçün uşağı qıcıqlandıra bilər;\n•İşığın çox güclü və ya zəif olması səbəb ola bilər;\n•Yuyunduğu zaman suyun tempraturunun dəyişməsi səbəb ola bilər;\n•İstifadə etdiyiniz şampun gözünü acılandıra bilər və ya şampunun qoxusu onu qıcıqlandıra bilər. Bu zaman:\n1) İlk öncə saydığımız bütün sensor həssaslıq yarada biləcək nüansları aradan qaldırırıq;\n2) Vanna otağına girmədən öncə çiməcəyi barədə məlumat veririk və bu məlumatı 5 dəqiqəlik aralıqlarla xatırlatma məqsədli təkrar təkrar uşağa bildiririk. Bu proses ona görə labüddür ki, yuyunmaq vaxtı gəldikdə, bu proses uşaq üçün gözlənilməz olmasın və rahat qəbul etsin;\n3) İcazə verin ki, uşaq yuyunmağa oyuncaqları ilə birlikdə gəlsin;\n4) Sabun köpükləri ilə oynamasına icazə verin, bu onun yuyunma prosesini sevməsini təmin edəcəkdir;\n**Saç yuylması.**\nƏgər saç yuma sizin övladınız üçün çətin həyata keçiriləcək bir nüansdırsa, başlanğıc üçün duş əvəzinə hər hansı qupluca (su qabı) istifadə edə bilərsiniz. Uşaq bu quplucanı su ilə doldurub, özü başına yaxınlaşdırmağa cəhd eləsin (çox səbrli olmaq lazımdır). Əvvəlcə oyuncaqlarının saçını yuyuruq bir yerdə, sonra eyni prosesi öz saçlarına tətbiq etməsini xahiş edirik. Şampunu onun əlinə töküb, başını əllərilə masaj edərək yumasını istəyirik. Bundan əlavə gün ərzində saçına toxunmamıza icazə verməsini xahiş edirik–saçlarını darayırıq və ya yumşaq şəkildə masaj edirik."
+    },
+    {
+      "id": 7,
+      "title": "Yuxu pozuntuları",
+      "image": "sleep.png",
+      "description": "Autizm spektr sindromunda çox vaxt yuxu ilə bağlı problemlər müşahidə olunur. Bəzi autizmli uşaqlar bütün gecəni yatmaya bilirlər və ya çox az saat yatırlar. Bəziləri gecə vaxtı çox aktiv olurlar, yalnız oynamaq istəyirlər və ya gecə boyu işığın yanıq qalmasını istəyirlər. Valideynlər bu problemlərlə çox tez-tez rastlaşırlar. Buna görə də yuxu rejiminin formalaşdırılması çox vacibdir. Nəzərə almakıyıq ki, yuxu rejimi ömür boyu lazım olan bir vərdişdir. Əgər uşağınızda yuxu pozğunluğu problemi varsa, ilk növbədə onun qidalanmasına baxmaq lazımdır. Uşaq çox miqdarda şəkər istifadə edirsə, şəkərin miqdarını tədricən azaltmaq və sonradan tamamilə rasiondan çıxarmaq lazımdır. Növbəti addım olaraq yuxu rejmi formalaşdırırıq və bu rejim haqqında öncədən məlumat verib, səbəbləri izah edirik: səhər enerjili olmaq, daha çox oyun oynaya bilmək və özünü yaxşı hiss etmək üçün.\nYatmazdan əvvəl qidalanma qaydası-uşaq axşam yatmazdan ən azı 1 saat əvvəl yeməklərini yeməlidir. Yatmağa çox yaxın saatlarda yemək düzgün deyil, çünki: yemək enerji artımına səbəb olur,mədə-bağırsaq sistemində diskomfort yaradır,və nəticədə yuxu rejimi pozulur.\nUşaq necə yuxuya gedir?\n Əgər televizor önündə, ayaqda yellədilərək və ya maşında gəzdirməklə yatızdırırsınsa, onları dəyişmək lazımdır. Çünki uşaq gecə oyandığı zaman yatdığı şəraiti axtarır və həmin şəraiti tapmadıqda yuxu rejimi pozulur. Əlavə olaraq, uşağın otağı onun üçün maksimum rahat və sevimli bir yer olmalıdır. Bunun üçün sevdiyi rəngi divar və pərdələrdə istifadə edə bilərsiniz və ya sevdiyi personajların şəkilləri və dekorlardan faydalana bilərsiniz.\nUşağı öz yatağına qaytarmaq.\nƏgər uşaq otağında yatmaq istəmir və bunun üçün səbəb yoxdursa, hər dəfə gecə oyandıqda onu sakit və mimikasız şəkildə yenidən öz yerinə qaytarın. Heç nə danışmadan sadəcə yerinə yatırın.Yatmadan öncə aktiv oyunlar oynamamağa, arxa fonda sakit musiqi açmağa, evin işıqlarını azaltmağa və televizor və digər elektronik alətləri söndürməyiniz daha yaxşı olar. Çünki bu halda uşaq yatmaq vaxtının yaxınlaşdığını hiss edib, daha rahat yuxuya gedər."
+    },
+    {
+      "id": 8,
+      "title": "Saç kəsimi",
+      "image": "haircut.png",
+      "description": "Saç kəsilməsi prosesi ümumiyyətlə bir çox autizmli uşaqlar üçün çətin və həyəcan yaradan bir vəziyyət ola bilər. Onların əksəriyyəti saç kəsdirmək ideyasına müsbət yanaşmır və bu prosesi təhlükəli və qorxulu qəbul edə bilir. Buna görə uşağın motivasiyasını artırmaq və saç kəsimini daha təhlükəsiz və rahat təcrübəyə çevirmək üçün mərhələli və yumşaq yanaşma tətbiq olunmalıdır.\n1. İlkin hazırlıq və prosesə dostlaşdırma.\nSaç kəsimini dərhal həyata keçirmək əvəzinə ilk olaraq uşağı bu ideyaya alışdırmaq lazımdır. Uşağa göstərmək vacibdir ki, saç kəsilməsi qorxulu və ağrılı bir proses deyil və təhlükəsiz şəkildə həyata keçirilə bilər. Bu mərhələdə əsas məqsəd — prosesi uşağa sevdirmək və onun içində müsbət emosiyalar yaratmaqdır.\n2. Rollu oyunlar.\nƏgər evdə Barbi kukla və ya yumşaq oyuncaqlar varsa, birlikdə saç ustası oyunu oynaya bilərsiniz. Uşaq oyuncaqları gətirir və sanki onların saçları kəsilir. Əgər uşaq plastilini sevirsə, plastilindən insan fiquru hazırlayıb, ona saç düzəldərək sonradan saçlarını kəsmək olar. Əgər uşaq əvvəlcə bu oyuna qoşulmaqdan imtina edirsə, ilk parikmaxer rolunu siz oynayın, daha sonra isə bu rolu uşağa təklif edin. Eyni zamanda ailə üzvləri bir-birinin saçını kəsməyi rollu oyun şəklində nümayiş etdirə bilərlər. Bu zaman saçı kəsilən ailə üzvü, prosesin rahat  olduğunu mimikalar, jestlər, jestifikasiyalar və sözlərlə bildirsin. Bu yanaşma uşağın prosesi daha pozitiv şəkildə qəbul etməsinə kömək edir.\n3. Alətlərlə tanışlıq.\nSaç kəsimi üçün istifadə olunan vasitələrini (qayçı, daraq, saç feni) oyun zamanı uşağa sevdirməyə çalışırıq. Uşaq oyun zamanı bu alətlərdən istifadə etdikcə, onların təhlükəsiz olduğunu gördükcə, qorxu və narahatlıq hissi azalır. Əsas məqsəd əvvəlcə alətlərlə dostlaşdırmaq, sonra isə prosesin özünə keçməkdir.\n4. Kiçik addımlarla real saç kəsiminə keçid.\nUşaq icazə verirsə və özünü rahat hiss edirsə, ilk mərhələdə saçdan çox kiçik bir hissə kəsilir. Hər dəfə icazəyə görə uşağı mütləq tərifləmək və təşviq etmək lazımdır. Saç kəsimi bir neçə gün ərzində hissə-hissə davam etdirilir və uşaq rahatlaşdıqca artıq daha çox hissəni kəsmək mümkün olur.\n5. Tədricən parikmaxerə alışdırma.\nUşaq ev şəraitində prosesi qəbul etdikdən və rahatlaşdıqdan sonra onu Parikmaxerə aparmaq olar. Məkan olaraq evə yaxın və tez-tez yanından keçdiyiniz parikmaxer seçilməsi daha məqsədəuyğundur. İlk gediş saç kəsdirmək üçün deyil, sadəcə müzakirə və müşahidə üçün ola bilər. Birlikdə içəri daxil olub, oturmaq, başqalarının saç kəsdirdiyini müşahidə etmək, sonra isə sadəcə çıxmaq uşağın adaptasiyasını xeyli asanlaşdırır. Uşaq məkanı, səsləri və prosesi idarə edən şəxsi (parikmaxeri) tanıdıqca qorxu hissi azalır və qəbul etmə ehtimalı artır.\nNəticə olaraq, mərhələli yanaşma və rollu oyunlardan istifadə etməklə saç kəsimi prosesini uşağa sevdirmək, rahatlıq və güvən yaratmaq mümkündür. Bu və ya buna bənzər oyunlardan istifadə edərək, uşağın saç kəsimi prosesinə adaptasiyasını formalaşdıra və möhkəmləndirə bilərsiniz."
+    },
+    {
+      "id": 9,
+      "title": "Diş fırçalama",
+      "image": "toothbrush.png",
+      "description": "Əgər övladınız diş fırçalama ilə bağlı çətinlik yaşayırsa—məsələn, diş fırçalamaq istəmirsə və ya vanna otağına girməkdən imtina edirsə — ilk növbədə onun sensor həssaslıqlarını nəzərə almaq lazımdır.\n•Vanna otağında istifadə edilən təmizləyici vasitələrin qoxusu uşaq üçün çox kəskin gəlirsə, bu, ona narahatlıq yarada bilər; \n•Hava təmizləyici sisteminin və ya ventilatorun səsi həddindən artıq yüksək olduqda, uşaq bu səbəbdən otağa girmək istəməyə bilər;\n•İşıqlandırma çox parlaq olduqda, bu, uşağın gözlərini yandıra və sensor həssaslığa görə qıcıq yarada bilər. Bu sensor faktorlar aradan qaldırıldıqdan sonra növbəti mərhələ—uşağı diş fırçalama prosesinin özünə müsbət şəkildə uyğunlaşdırmaqdır. Uşaq anlamalıdır ki, bu proses xoş, təhlükəsiz və əyləncəli ola bilər.\nAutizmli uşaqlarda xüsusi olaraq aşağıdakı məqamlara diqqət etmək vacibdir:\n•Diş pastasının dadı çox kəskin və ya güclü ola bilər və bu, uşağın xoşuna gəlməyə bilər;\n•Diş fırçasının sərtliyi uşağa uyğun olmaya bilər. Həddindən artıq sərt fırçalar narahatlıq yarada bilər;\n•Vibrasiyalı elektrik fırçaları bəzi autizmli uşaqlarda güclü sensor diskomfort—qıcıqlanma yarada bilər. Bu kimi hallarda fırça və pastanı uşağın həssaslığına uyğun seçmək çox vacibdir.\nUşağın motivasiyasını artırmaq üçün:\n1. Diş fırçasını onun sevdiyi rənglərdə seçə bilərsiniz\n2. Sevdiyi cizgi film qəhrəmanlarının şəkillərini diş fırçasının üzərinə yapışdırmaq olar;\n3. Uşaqla birlikdə fırçanı özünəməxsus şəkildə dizayn etmək—rəngləmək, stikerlərlə bəzəmək çox motivasiyaedici ola bilər;\n4. Diş pastasını seçərkən biz diqqət etməliyik ki, onun dadı nə çox kəskin, nə çox şirin, nə də çox mentollu olsun.\nUşağın bu proseslə dostlaşması və motivasiyanın artırılması üçün bir neçə əyləncəli oyunlardan istifadə etmək olar:\n•Modeləşdirmə\n•Valideynlər (ata və ana) öz dişlərini fırçalayarkən uşağa göstərərək, bunun necə xoş və rahatladıcı bir proses olduğunu sözlərlə, mimikalarla və jestlərlə əyləncəli şəkildə ifadə edə bilərlər;\n•Rollu oyunlar\n•Uşağın oyuncaqlarını yan-yana düzüb onların “dişlərini yumaq” oyununu təşkil etmək olar. Bu proses həm nəzarət hissəsini azaldır, həm də oyuna çevirərək təzyiqi aradan qaldırır.\n•Sevdiyi personajlardan istifadə;\n•Uşağın sevdiyi cizgi filmi qəhrəmanının diş yuma səhnəsini video formatında göstərmək, onun motivasiyasını artırmağa kömək edə bilər.\nDiş fırçalama prosesi uşağın gözündə: qorxudan → marağa, məcburiyyətdən → oyuna və pozitiv təcrübəyə çevrilməlidir. Yuxarıda göstərilən şəkildə oyunlar quraraq uşağın diş fırçalama prosesini formalaşdıra və möhkəmləndirə bilərsiniz."
+    },
+    {
+      "id": 10,
+      "title": "Yeni qıdanın rasiona əlavə olunması",
+      "image": "new_food.png",
+      "description": "Bəzi autizmli uşaqlar yalnız bir tip yemək yeyir və başqa qidaları qəti şəkildə qəbul etmirlər. Çox vaxt bu qidalar fast-food və yüksək şəkər tərkibli məhsullar olur. Uşaqlar meyvə, tərəvəz və digər faydalı qidaları yeməkdən imtina etdikdə, valideynlər özlərini çıxılmaz vəziyyətdə hiss edə bilərlər. Bu səbəbdən, autizmli uşaqların rasionuna yeni qidaların əlavə olunması üçün bir neçə effektiv yanaşma təqdim edirik:\n1. Şəkərin rasiondan çıxarılması.\nƏgər siz şəkəri tədricən uşağın rasionundan çıxarırsınızsa, bir müddətdən sonra uşaq daha faydalı qidalara maraq göstərməyə və onları daha iştahla qəbul etməyə başlayır. Şəkər iştahın təbii mexanizmini pozduğu üçün, onun azaldılması digər qidaların dadını daha aydın hiss etməyə şərait yaradır.\n2. Modelləşdirmə metodikası.\nYeni yeməyi uşağa təqdim edərkən özünüz nümunə olun:\nYeməyi həm uşağın, həm də öz boşqabınıza qoyun. Masa arxasında birlikdə əyləşin, amma uşağı məcbur etməyin. Tam nəzarəti uşağa verin — gözləntilər və təzyiq olmadan. Öz yeməyinizi sevə-sevə, iştahla və mimikalarla ifadəli şəkildə yeyin. Uşaq yeməyə baxır, qoxlayır və ya dadına baxırsa — müsbət emosiyalarla tərifləyin.\n3. Qoxuya və görünüşə alışdırma mərhələsi.\nUşaq yeni qidanı yeməzdən əvvəl onun qoxusuna və görünüşünə adaptasiya olmalıdır. Bunun üçün, yeməyin kiçik porsiyalarını evin müxtəlif yerlərinə qoya bilərsiniz. Uşaq həmin qidanı görüb qoxlamaqla ona hissi baxımdan yaxınlaşır.\n4. Məcburiyyətsiz yanaşma\nBu prosesdə məqsəd tam porsiyanı yeməsi deyil — sadəcə dadına baxmasıdır. Siz sadəcə deyə bilərsiniz: “Əgər istəyirsənsə, dadına baxa bilərsən.”\n5. Sensor xüsusiyyətləri nəzərə almaq\nBəzi uşaqlar qidanın dadından çox teksturasına həssasdır. Məsələn, pomidor üç fərqli teksturaya malikdir: qabığı, ətli hissəsi və dənələri. Ola bilər ki, uşaq yalnız ətli hissəni qəbul etsin. Bu detal çox vacibdir və mütləq nəzərə alınmalıdır.\n6. Şəkil və forma ilə motivasiya\nUşaq sevdiyi fiqurları daha asan qəbul edə bilər: Ulduz, ürək, həndəsi fiqurlar və s. kimi formalar istifadə oluna bilər.Əgər uşaq bu formaları xoşlayırsa, tərəvəzləri bu fiqurlarla kəsib yeməklərə əlavə edə bilərsiniz və ya meyvələri bu formada kəsib uşağa təqdim edə bilərsiniz.\n7. Yeməklərin ayrıca qablarda təqdimatı\nBəzi autizmli uşaqlar boşqabda bir neçə yemək olduqda, o qarışıq görüntünü qəbul etməkdə çətinlik çəkirlər. Məsələn, siz bir boşqabda uşağa həm yemək, həm də salat təqdim edirsinizsə, bu qarışıq görüntü uşağa narahatlıq verə bilər və nəticədə o yeməkdən tamamilə imtina edə bilər. Bu səbəbdən, yeməyi, salatı və digər qidaları ayrı-ayrı boş qablarda təqdim etmək daha düzgündür.\nYeni qidaların uşağın rasionuna daxil edilməsi prosesinin əsas açarı məcburiyyətsiz yanaşma, səbir və ardıcıllıqdır. Uşaq nəzarətin özündə olduğunu hiss etdikdə və öz marağı ilə yaxınlaşdıqda nəticələr daha uğurlu olur."
+    }
+  ]
+}
